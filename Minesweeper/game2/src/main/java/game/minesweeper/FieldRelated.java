@@ -122,11 +122,11 @@ public class FieldRelated {
         //find mines here
     }
     private int getAccurateTotal(){
-        int newTotal = Fx*Fy;
+        int newTotal = 0;
         for(int i = 0; i<gridForGame.getChildren().size();i++){
             Button tempButn = (Button)gridForGame.getChildren().get(i);
             if(tempButn.getText().contains(".")){
-                total++;
+                newTotal++;
             }
         }
         return newTotal;
