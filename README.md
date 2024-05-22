@@ -11,7 +11,7 @@ Instruction to play minesweeper yourself:
 
 Instructions on how to navigate the game:
 Once you load the game you will see this window:
-(media/loadWindow.png)
+[Start](media/loadWindow.png)
 In here you can choose to play or quit. 
 Up on pressing Quit you will close the game.
 Up on pressing Play you will will be directed to another window that looks like this:
