@@ -11,8 +11,9 @@ Instruction to play minesweeper yourself:
 
 Instructions on how to navigate the game:
 Once you load the game you will see this window:
-[(media/loadWindow.png)]
+![image](https://github.com/OlegKov33/Minesweeper/assets/91954137/d50699c2-b02c-4a62-aa44-998d063dec7b)
+
 In here you can choose to play or quit. 
 Up on pressing Quit you will close the game.
 Up on pressing Play you will will be directed to another window that looks like this:
-(media/gameField.png)
+![imageStart](https://github.com/OlegKov33/Minesweeper/assets/91954137/1998bdc6-de9b-4845-9a97-bdf971fe0b7a)
