@@ -16,6 +16,7 @@ Once you load the game you will see this window:
 In here you can choose to play or quit. 
 Upon pressing Quit you will close the game.
 Upon pressing Play you will will be directed to another window that looks like this:
+
 ![imageStart](https://github.com/OlegKov33/Minesweeper/assets/91954137/1998bdc6-de9b-4845-9a97-bdf971fe0b7a)
 
 Once you are on second page, you have an option to select difficulty by pressing __(Settings)__ followed by one of the 3 difficulties. After that press __(Play)__. In the example below you can see beginner difficulty being selected:
