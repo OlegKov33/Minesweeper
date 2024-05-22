@@ -34,5 +34,5 @@ Notes and comments:
 - If you wish to load the game, you would need to press __(Back)__ button, __(Play)__ paste the code into the box where you got the code from orignally, select __(Load)__ in settings, and then press __(Play)__
 - If you wish to play Expert, NOTE that you may have to fullscreen as some cells could be hidden from you depending on your monitor size.
 - If you wish to disable the field information, comment out this part in FieldRelated class:
+  
    ![image](https://github.com/OlegKov33/Minesweeper/assets/91954137/0c10d5e7-45dc-4d7d-9be3-d0406bc39a45)
-
