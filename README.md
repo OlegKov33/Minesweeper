@@ -31,3 +31,6 @@ Notes and comments:
 - The game was tested in Visual Studio Code, with JavaFX runtime 13, where 21 is the latest version, windows 10, in addition 4:3 monitor was used.
 - If you wish to save the game __(Right Click)__ on the text, select __"Select All"__ option and left click, __(Right Click)__ on the text again, select __"Copy"__ and press left click. After that save the code where ever you like as the game will only generate it, but __not__ save it.
 - Upon restarting the project, the code gets erased from the clipboard (when you copy code, it is stored on your clipboard)
+- If you wish to play Expert, NOTE that you may have to fullscreen as some cells could be hidden from you depending on your monitor size.
+- If you wish to disable the field information, comment out this part in FieldRelated class: ![image](https://github.com/OlegKov33/Minesweeper/assets/91954137/0c10d5e7-45dc-4d7d-9be3-d0406bc39a45)
+
