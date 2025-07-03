@@ -7,6 +7,7 @@ Simple minesweeper game with 3 game modes and the ability to load a saved game.
 1) Press on the text >>> [Minesweeper.rar](Minesweeper.rar)
 2) Press **Ctrl + Shift + S** on your keyboard or navigate to a button with [. . .], near the "Go to file" search bar
 3) Extract the jar file, navigate to **Minesweeper.exe** and enjoy.
+* If you want to save your game, press the big list of numbers, press either Ctrl + A and Ctrl + C or **Right mouse Click**, "Select All" and "Copy". Save your password in a file such as Notepad, Microsoft Word or Google Docs.
 ![MainMenu](media/MainPage.jpg)
 
 * **If you get a Windows amber warning, don't worry, the game is 100% safe!**
