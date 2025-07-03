@@ -1,38 +1,28 @@
 # Minesweeper
-Simple minesweeper game with 3 game modes and an ability to load the game saved
+Simple minesweeper game with 3 game modes and the ability to load a saved game.
+> [!NOTE]
+> If you simply want to play the game, please look no further than the **Instructions on how to play the game**
 
-Instruction to play minesweeper yourself:
-1) Install Visual Studio Code, NetBeans, IntelliJ IDEA or some other software that can run java projects.
-2) Install the extensions in VSC for java on left side bar fifth icon down or press (Ctrl+Shift+X) together
-3) Setup JavaFX, using this guide [here](https://openjfx.io/openjfx-docs/)
-4) Copy the files in this guthub repository, follow this guide [here](https://www.geeksforgeeks.org/how-to-clone-a-project-from-github-using-vscode/)
-5) Run the App.java or press F5
+### Instructions on how to play the game:
+1) Press on the text >>> [Minesweeper.rar](Minesweeper.rar)
+2) Press **Ctrl + Shift + S** on your keyboard or navigate to a button with [. . .], near the "Go to file" search bar
+3) Extract the jar file, navigate to **Minesweeper.exe** and enjoy.
+![MainMenu](media/MainPage.jpg)
+
+* **If you get a Windows amber warning, don't worry, the game is 100% safe!**
+
+![image](media/virustotals_analysis.jpg)
+![GamePage](media/BeginnerGameWithSaveCode.jpg)
 
 
-Instructions on how to navigate the game:
-Once you load the game you will see this window:
-![image](https://github.com/OlegKov33/Minesweeper/assets/91954137/d50699c2-b02c-4a62-aa44-998d063dec7b)
+> [!IMPORTANT]
+> The following section is dedicated towards developers
+### Developer's notes
+The game was created with the help of Java 21.0.5, JavaFX SDK 21.0.7, JavaFX 21.0.7 jmods, Apache Maven 3.9.10, WiX 3.14.1, Visual Studio Code and Scene Builder. Additionally, generative AI such as **ChatGPT** and **DeepSeek** were used due to a lack of knowledge on how to use the tools to achieve the .exe file format.
 
-In here you can choose to play or quit. 
-Upon pressing Quit you will close the game.
-Upon pressing Play you will will be directed to another window that looks like this:
+The previous version of Minesweeper was created using Java 17 and JavaFX SDK 13, as well as had several problems and bugs. 
+1. The program loaded the game's field in a - x, y format (0, 0), (0, 1), (0, 2)... Resulting in a game being displayed in portrait rather than landscape, causing problems when opening cells in the Expert (30 x 16) mode.
+2. If the button (start) is pressed multiple times, multiple fields are created and overlayed over one another.
+3. The game was created using a 2D whereas the JavaFX element accepted a 1D array, which added a lot of unnecessary complexity.
 
-![imageStart](https://github.com/OlegKov33/Minesweeper/assets/91954137/1998bdc6-de9b-4845-9a97-bdf971fe0b7a)
-
-Once you are on second page, you have an option to select difficulty by pressing __(Settings)__ followed by one of the 3 difficulties. After that press __(Play)__. In the example below you can see beginner difficulty being selected:
-![image](https://github.com/OlegKov33/Minesweeper/assets/91954137/8dc453c1-8adf-43b2-931f-cbf41bdd8b67)
-
-After you have started, you can save the game by pressing __(Save)__ button, resulting in code being created:
-![image](https://github.com/OlegKov33/Minesweeper/assets/91954137/f0b460d3-d951-425f-80ac-72379cecdd0c)
-
-Notes and comments:
-- The game allows you to create a field with one of the 3 sizes (8x8), (16x16), (30x16) with (10), (40), (90) mines respectively.
-- You can win in any of the game modes __but__ you can only load __beginner__ and __intermediate__ reliably as expert doesn't load as expected.
-- The game was tested in Visual Studio Code, with JavaFX runtime 13, where 21 is the latest version, windows 10, in addition 4:3 monitor was used.
-- If you wish to save the game __(Right Click)__ on the text, select __"Select All"__ option and left click, __(Right Click)__ on the text again, select __"Copy"__ and press left click. After that save the code where ever you like as the game will only generate it, but __not__ save it.
-- Upon restarting the project, the code gets erased from the clipboard (when you copy code, it is stored on your clipboard)
-- If you wish to load the game, you would need to press __(Back)__ button, __(Play)__ paste the code into the box where you got the code from orignally, select __(Load)__ in settings, and then press __(Play)__
-- If you wish to play Expert, NOTE that you may have to fullscreen as some cells could be hidden from you depending on your monitor size.
-- If you wish to disable the field information, comment out this part in FieldRelated class:
-  
-   ![image](https://github.com/OlegKov33/Minesweeper/assets/91954137/0c10d5e7-45dc-4d7d-9be3-d0406bc39a45)
+Currently, the game has an ongoing problem where the buttons don't display the flags or mines upon winning or losing the game, and instead show (...). However, upon opening the game in full-screen windowed view, everything is visible.
