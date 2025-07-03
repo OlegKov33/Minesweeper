@@ -7,11 +7,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.minesweeper.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.minesweeper.MainController">
    <children>
       <Label layoutX="185.0" layoutY="37.0" text="Welcome to Minesweeper" AnchorPane.topAnchor="40.0">
          <font>
-            <Font size="20.0" />
+            <Font name="Calibri" size="24.0" />
          </font>
       </Label>
       <Label layoutX="269.0" layoutY="381.0" text="Made by OlegKov33" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0">
@@ -22,12 +22,18 @@
             <Font size="7.0" />
          </font>
       </Label>
-      <Button layoutX="282.0" layoutY="102.0" mnemonicParsing="false" onAction="#Play" onMouseEntered="#showPlayInfo" onMouseExited="#defaultMessage" text="Play " AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="100.0">
+      <Button layoutX="282.0" layoutY="102.0" mnemonicParsing="false" onAction="#play" onMouseEntered="#showPlayInfo" onMouseExited="#defaultMessage" text="Play " AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="100.0">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
       </Button>
-      <Button layoutX="274.0" layoutY="285.0" mnemonicParsing="false" onAction="#Quit" onMouseEntered="#showQuitInfo" onMouseExited="#defaultMessage" text="Quit " AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="200.0" />
-      <Text fx:id="MainInfo" layoutX="208.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To start, press or hover over the button to the left of this message to know what they do." wrappingWidth="230.0" AnchorPane.topAnchor="150.0" />
+      <Button layoutX="274.0" layoutY="285.0" mnemonicParsing="false" onAction="#quit" onMouseEntered="#showQuitInfo" onMouseExited="#defaultMessage" text="Quit " AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Text fx:id="mainsText" fontSmoothingType="LCD" layoutX="208.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To start, press or hover over the button to the left of this message to know what they do." wrappingWidth="230.0" AnchorPane.topAnchor="150.0" />
    </children>
 </AnchorPane>

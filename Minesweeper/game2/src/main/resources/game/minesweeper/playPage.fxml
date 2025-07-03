@@ -10,11 +10,20 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.minesweeper.MainController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.minesweeper.MainController">
    <children>
-      <Button layoutX="23.0" layoutY="97.0" mnemonicParsing="false" onMouseClicked="#Back" text="Back " AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="100.0" />
-      <Button fx:id="SaveBtn" disable="true" layoutX="36.0" layoutY="156.0" mnemonicParsing="false" onAction="#Save" text="Save" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="150.0" />
-      <Button layoutX="40.0" layoutY="242.0" mnemonicParsing="false" onAction="#Start" text="Start" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="200.0" />
+      <Button layoutX="23.0" layoutY="97.0" mnemonicParsing="false" onMouseClicked="#back" text="Back " AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font></Button>
+      <Button fx:id="saveButton" disable="true" layoutX="36.0" layoutY="156.0" mnemonicParsing="false" onAction="#save" text="Save" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="40.0" layoutY="242.0" mnemonicParsing="false" onAction="#start" text="Start" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
       <MenuButton layoutX="445.0" layoutY="125.0" mnemonicParsing="false" text="Settings" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="100.0">
         <items>
           <MenuItem fx:id="Beginner" mnemonicParsing="false" onAction="#setDifficulty" text="Beguinner" />
@@ -22,11 +31,20 @@
             <MenuItem fx:id="Expert" mnemonicParsing="false" onAction="#setDifficulty" text="Expert" />
             <MenuItem fx:id="Load" mnemonicParsing="false" onAction="#setDifficulty" text="Load" />
         </items>
+         <font>
+            <Font size="14.0" />
+         </font>
       </MenuButton>
-      <Label fx:id="Difficulty" layoutX="286.0" layoutY="40.0" text="Difficulty: " AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="40.0" />
+      <Label fx:id="difficulty" layoutX="180.0" layoutY="35.0" prefHeight="20.0" prefWidth="148.0" text="Difficulty: " AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="272.0" AnchorPane.topAnchor="35.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
       <Label fx:id="status" layoutX="286.0" layoutY="64.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="60.0" />
-      <TextArea fx:id="STRINGCODE" layoutX="386.0" layoutY="19.0" prefHeight="50.0" prefWidth="200.0" AnchorPane.topAnchor="20.0" />
-      <Text layoutX="386.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the code below." AnchorPane.topAnchor="5.0" />
+      <TextArea fx:id="inputCode" layoutX="386.0" layoutY="30.0" prefHeight="50.0" prefWidth="200.0" AnchorPane.topAnchor="30.0" />
+      <Text layoutX="386.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the save code below" wrappingWidth="192.759765625" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
       <Label layoutX="279.0" layoutY="391.0" text="Made by OlegKov33" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0">
          <opaqueInsets>
             <Insets bottom="10.0" />

@@ -19,7 +19,7 @@ public class App extends Application {
     
     @Override
     public void start(Stage stage) throws IOException {
-        //if you are changing dimentions from 640 x 480, you will change how game layout will be.
+        //if you are changing dimensions from 640 x 480, you will change how game layout will be.
         scene = new Scene(loadFXML("mainPage"), 640, 480);
         stage.setScene(scene);
         this.stage = stage;

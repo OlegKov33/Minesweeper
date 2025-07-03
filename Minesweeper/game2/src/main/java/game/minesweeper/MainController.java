@@ -14,13 +14,13 @@ import javafx.scene.text.Text;
 public class MainController {
     
     @FXML
-    private Text MainInfo;
+    private Text mainsText;
 
     @FXML
     private MenuItem Beginner;
 
     @FXML
-    private Label Difficulty;
+    private Label difficulty;
 
     @FXML
     private MenuItem Expert;
@@ -32,101 +32,100 @@ public class MainController {
     private GridPane fieldStage;
 
     @FXML
-    private Button SaveBtn;
+    private Button saveButton;
 
     @FXML
-    private TextArea STRINGCODE;
+    private TextArea inputCode;
 
     @FXML
-    private AnchorPane Pane = new AnchorPane();
-    
-    private FieldRelated tempFieldRelated = null;
+    private AnchorPane anchorPane = new AnchorPane();
 
-    //the message that will be shown as soon as you run the program
+    private NewField tempFieldRelated = null;
+
+    //this message that will be shown as soon as you run the program
     @FXML
     void defaultMessage(MouseEvent event) {
         String text = "To start, press or hover over the button to the left of this message to know what they do.";
-        MainInfo.setText(text);
+        mainsText.setText(text);
     }
 
 
-    //the message that will be shown when you hover over (Play) button
+    //this message that will be shown when you hover over (Play) button
     @FXML
     void showPlayInfo(MouseEvent event){
-        String text = "\t\tPLAY\nYour goal is to open all of the boxes without a mine, leaving those with.\n\nOpen boxes with (Left Click)\nIf you wish to load the game, paste the code in the box, select (Load) setting and press play.\n\nTo start select difficulty in (Settings) or press Play";
-        MainInfo.setText(text);
+        String text = "\t\tPLAY\nYour goal is to open all of the boxes without a mine, leaving those with.\n\nOpen boxes with (Left Click)\nIf you wish to load the game, paste the code in the box, select (Load) setting and press play.\n\nTo start select difficulty in (Settings) or press Start";
+        mainsText.setText(text);
     }
 
 
-    //the message that will be shown when you hover over (Quit) button
+    //this message that will be shown when you hover over (Quit) button
     @FXML
     void showQuitInfo(MouseEvent event) {
         String text = "\t\tQUIT\nYou are about to close the game.";
-        MainInfo.setText(text);
+        mainsText.setText(text);
     }
 
 
     //this button is used to go to main page
     @FXML
-    void Back(MouseEvent event) throws IOException {
+    void back(MouseEvent event) throws IOException {
         App.changeScene("mainPage");
     }
 
 
     //changes into playing page
     @FXML
-    void Play(ActionEvent event) throws IOException {
+    void play(ActionEvent event) throws IOException {
         App.changeScene("playPage");
     }
 
 
     //pressing this button will close the game
     @FXML
-    void Quit(ActionEvent event){
+    void quit(ActionEvent event){
         javafx.application.Platform.exit();
     }
 
 
     //saves the game
     @FXML
-    void Save(ActionEvent event) {
-        STRINGCODE.setText(tempFieldRelated.Save());
+    void save(ActionEvent event) {
+        inputCode.setText(tempFieldRelated.save());
     }
 
 
     //NOT TO BE CONFUSED with start button on the main page.
     //this method is called inside gamePage, starts FieldRelated class
     @FXML
-    void Start(ActionEvent event) {
-        SaveBtn.setDisable(false);
-        String test = STRINGCODE.getText();
-        test = test.replace("\t", "");
+    void start(ActionEvent event) {
+        saveButton.setDisable(false);
+        String saveText = inputCode.getText();
+        saveText = saveText.replace("\t", "");
 
-        if(Difficulty.getText().length()==12){
-            Difficulty.setId("Beginner");
-            Difficulty.setText("Difficulty: Beginner");
 
+        if(difficulty.getText().length()==12){
+            difficulty.setId("Beginner");
+            difficulty.setText("Difficulty: Beginner");
         };
-        
-        FieldRelated createBoard = new FieldRelated(Difficulty.getId(), Pane, test);
-        if(Difficulty.getId().contains("Load")){
+
+
+        NewField createBoard = new NewField(difficulty.getId(), anchorPane, saveText);
+        if(difficulty.getId().contains("Load")){
         }
         else{
         createBoard.start();
         }
 
-
+        // used for saving
         tempFieldRelated = createBoard;
-        Button a = (Button)event.getSource();
-        a.setDisable(true);
     }
 
 
     //set's difficulty which then will be used by start method above
     @FXML
     void setDifficulty(ActionEvent event){
-        Difficulty.setText("Difficulty: "+((MenuItem)event.getSource()).getId());
-        Difficulty.setId(((MenuItem)event.getSource()).getId());
+        difficulty.setText("Difficulty: "+((MenuItem)event.getSource()).getId());
+        difficulty.setId(((MenuItem)event.getSource()).getId());
     }
 
 }
